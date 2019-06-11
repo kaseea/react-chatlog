@@ -8,8 +8,13 @@ const Chat = (props) => {
   // side question, how would you debug that?
 
   const chatComponents = props.chats.map( (chat, i) => {
+    //   let classy = 'chat-entry';
+      let classy = chat.sender === "Vladimir" ? ' local' : ' remote';
+
+
     return (
-      <div  key={i}>
+        
+      <div className={`chat-entry ${classy}`} key={i}>
         <Bubble
           sender={ chat.sender }
           body={ chat.body }
@@ -19,10 +24,8 @@ const Chat = (props) => {
   });
   
     return (
-      <section >
-        <div className="chat-entry local">
+      <section>
           { chatComponents }
-        </div>
       </section>
     );
   };

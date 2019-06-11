@@ -19,6 +19,8 @@ const App = () => {
       <main className="App-main">
         <div className="chat-log">
 
+            {/* cause this is my entire collection of messages */}
+
         <Chat chats={chatMessages} />
         </div>
         

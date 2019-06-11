@@ -5,16 +5,17 @@ import Timestamp from './Timestamp';
 const Bubble = (props) => {
   // Fill in your code here
   return (
-    <section>
+    <div>
 
     {/* <h3>{ props.timestamp } </h3> */}
 
     
-      <h3 className="entry-name"> { props.sender } </h3>
-      <h3 className="entry-bubble">{ props.body }</h3>
-      <h6 className="entry-time"> <Timestamp time= { props.time }/></h6>
+      <p className="entry-name"> { props.sender } </p>
+      <div className="entry-bubble">
+      <p className="entry-body"> { props.body }</p> 
+      <p className="entry-time"> <Timestamp time= { props.time }/></p></div>
       {/* so, note to self, it has to match the name time on Timestamp */}
-  </section>
+  </div>
   );
 }
 
